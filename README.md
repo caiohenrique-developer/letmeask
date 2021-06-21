@@ -1,2 +1,3 @@
 # letmeask
-&lt;strong>Toda pergunta tem uma resposta.&lt;/strong> Aprenda e compartilhe conhecimento com outras pessoas
+
+Toda pergunta tem uma resposta. Aprenda e compartilhe conhecimento com outras pessoas
