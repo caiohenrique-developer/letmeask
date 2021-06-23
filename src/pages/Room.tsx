@@ -8,7 +8,21 @@ import { database } from "../services/firebase";
 
 import "../styles/room.scss";
 
-type FirebaseQuestions = {
+type FirebaseQuestions = Record<
+  string,
+  {
+    author: {
+      name: string;
+      avatar: string;
+    };
+    content: string;
+    isAnswered: boolean;
+    isHighlighted: boolean;
+  }
+>;
+
+type Question = {
+  id: string;
   author: {
     name: string;
     avatar: string;
@@ -16,17 +30,6 @@ type FirebaseQuestions = {
   content: string;
   isAnswered: boolean;
   isHighlighted: boolean;
-};
-
-type Question = {
-  id: string;
-  // author: {
-  //   name: string;
-  //   avatar: string;
-  // }
-  // content: string;
-  // isAnswered: boolean;
-  // isHighlighted: boolean;
 };
 
 type RomParams = {
@@ -53,10 +56,10 @@ export function Room() {
         ([key, value]) => {
           return {
             id: key,
-            // content: value.content,
-            // author: value.author,
-            // isHighlighted: value.isHighlighted,
-            // isAnswered: value.isAnswered,
+            content: value.content,
+            author: value.author,
+            isHighlighted: value.isHighlighted,
+            isAnswered: value.isAnswered,
           };
         }
       );
