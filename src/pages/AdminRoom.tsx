@@ -98,14 +98,14 @@ export function AdminRoom() {
                     >
                       <img src={answerImg} alt="Dar destaque a pergunta" />
                     </button>
-                    <button
-                      type="button"
-                      onClick={() => handleDeleteQuestion(question.id)}
-                    >
-                      <img src={deleteImg} alt="Remover pergunta" />
-                    </button>
                   </>
                 )}
+                <button
+                  type="button"
+                  onClick={() => handleDeleteQuestion(question.id)}
+                >
+                  <img src={deleteImg} alt="Remover pergunta" />
+                </button>
               </Question>
             );
           })}
